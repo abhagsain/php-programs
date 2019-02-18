@@ -45,16 +45,11 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active mt-2" id="question-1" role="tabpanel" aria-labelledby="question-1-tab">
                 <h5>Write a Program to reverse the user entered string.</h5>
-                <!-- 
-
-                    include "question-1.php"
-                    
-                    -->
                 <form class="w-50 mt-2">
-                    
+
                     <div class="form-group">
                         <input type="text" id="input-question-1" name="string" class="form-control">
-                        <p class="output"></p>
+                        <p class="question-1-output"></p>
                     </div>
                 </form>
             </div>
@@ -66,9 +61,47 @@
             </div>
             <div class="tab-pane fade show mt-2" id="question-3" role="tabpanel" aria-labelledby="question-3-tab">
                 <h5>Write a menu driven program that</h5>
-                <?php
-                    include "question-3.php"
-                ?>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a
+                                class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                                role="tab" aria-controls="v-pills-home" aria-selected="true">Remove Whitespaces</a><a
+                                class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                                role="tab" aria-controls="v-pills-profile" aria-selected="false">String contains
+                                another string</a><a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+                                role="tab" aria-controls="v-pills-messages" aria-selected="false">String is all
+                                lowercase (regex_</a><a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                                href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Replace
+                                the with that</a></div>
+                    </div>
+                    <div class="col-8">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <form method="post">
+                                    <div class="form-group"><input type="text" name="tf-whitespaces" id="input-question-3"
+                                            placeholder="Enter a string with whitespaces" class="form-control"></div>
+                                    <div class="form-group">
+                                        <p class="question-3-output"></p>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                <div class="form-group">
+                                    <input type="text" name="tf-whitespaces" id="input-first" placeholder="Primary String"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="tf-whitespaces" id="input-second" placeholder="Sub String"
+                                        class="form-control">
+                                </div>
+                                <div id="q3-output"></div>
+                                <div class="form-group"><button id="substrBtn" class="btn btn-primary">Check</button></div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
