@@ -56,3 +56,33 @@ document.getElementById('substrBtn').addEventListener('click', function (e) {
 })
 sendAjaxRequest('input-question-1');
 sendAjaxRequest('input-question-3');
+
+// Question 3 replace this with that 
+
+document.getElementById('q3-replace').addEventListener('click', function (e) {
+    // e.preventDefault(); // to prevent the default behaviouir of the button to refresh the page
+    const input1 = document.querySelector('#replace1');
+    const input2 = document.querySelector('#replace2');
+    replaceText(input1, input2);
+})
+
+function replaceText(input1, input2) {
+    const xhr = getXMLInstance();
+    const URL = 'question-3.php';
+    xhr.open('POST', URL, true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    if (input1.value && input2.value) {
+        xhr.send("input1=" + input1.value + "&" + "input2=" + input2.value);
+        xhr.onreadystatechange = function () {
+
+            if (this.readyState === 2) {
+                input1.innerHTML = "Loading response";
+            }
+            if (this.readyState === 4 && this.status === 200) {
+                input1.value = this.responseText;
+
+                input2.value = input2.value === "that" ? "this" : "that";
+            }
+        }
+    }
+}

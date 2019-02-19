@@ -23,4 +23,12 @@
          else echo 'true';
       }
    }
+
+   if(isset($_POST['input1']) && isset($_POST['input2'])){
+      // This is the case of replace the 'this' with 'that'
+      $input1 = $_POST['input1'];
+      $input2 = $_POST['input2'];
+      $replace = $input2 === "that" ? "this" : "that";
+      echo str_replace($replace,$input2, $input1);
+   }
 ?>

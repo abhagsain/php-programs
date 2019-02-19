@@ -98,7 +98,17 @@
                                 <div class="form-group"><button id="substrBtn" class="btn btn-primary">Check</button></div>
                             </div>
                             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                <div class="form-group">
+                                    <input type="text" id="replace1" disabled class="form-control" value="this input contains this and only this" placeholder="Enter something that contains the word 'the'">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" value="that" id="replace2"  disabled class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary" id="q3-replace">Replace</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
